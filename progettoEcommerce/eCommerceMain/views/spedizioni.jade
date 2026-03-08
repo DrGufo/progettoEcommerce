@@ -4,9 +4,7 @@ block content
     #content
       div(id="divForm")
         h1 Spedizione
-        text Seleziona il metodo di spedizione
-        br
-        br
+        p Seleziona il metodo di spedizione
         form(action="/checkout", method="post")
           input(id="in", type="hidden", name="product", value=JSON.stringify(prodotto))
           button(type="submit", class="m", name="but" value="casa") Ricevi a casa
