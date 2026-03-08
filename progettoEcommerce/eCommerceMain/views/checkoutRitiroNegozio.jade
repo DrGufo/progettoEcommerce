@@ -1,0 +1,22 @@
+extends layout 
+
+block content 
+    #content
+    h1 Checkout
+    div(id="content")
+        h1 Ritiro in negozio
+
+        input(id="ritiroSede", type="hidden", value=ritirabileInSede)
+        input(id="ritiroSede1", type = "hidden", value=ritirabileInSede1)
+        input(id="ritiroNegozio1", type = "hidden", value=ritirabileInNegozio1)
+        input(id="ritiroNegozio2", type = "hidden", value=ritirabileInNegozio2)
+
+        div(id="infoRitiro")
+
+        div= "Prodotto: " + prodotto.descrizione 
+        div= "Prezzo: " + prodotto.prezzo + "€"
+        br
+        br
+        a(href='/visualizza') Torna alla visualizzazione prodotti
+    
+    script(src="./javascripts/checkoutRitiroNegozio.js")

@@ -1,0 +1,241 @@
+body {
+  background-color: rgb(248, 255, 184);
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#upper{
+  background-color: rgb(255, 255, 163);
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#registrazione{
+  background-color: rgb(255, 255, 163);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#signIn{
+  background-color: rgb(255, 255, 163);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#login {
+  background-color: rgb(255, 255, 163);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#visualizza {
+  background-color: rgb(255, 255, 163);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ffb923;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #ffb923;
+}
+
+tr:hover {
+  background-color: #fdc54dcc;
+}
+
+#immagine {
+  width: 50%;
+  height: 50%;
+}
+#button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+#button:hover {
+  background-color: #0056b3;
+}
+
+.m:disabled:hover{
+  cursor: not-allowed;
+}
+.section:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.m, .p {
+  background-color: #ffb923;
+  color: #000000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 170px;
+  margin: 10px;
+}
+.m, .p:hover {
+  background-color: #fdaf05;
+}
+
+#in{
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -2;
+}
+
+#operazioni{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#modifica{
+  background-color: rgb(255, 255, 163);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cancella{
+  background-color: rgb(255, 255, 163);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 25%;
+  height: 50%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#b1{
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  margin: 10px;
+}
+#b1:hover {
+  background-color: #0056b3;
+}
+#b2{
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+#b2:hover {
+  background-color: #0056b3;
+}
+#div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vw;
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  background-color: whitesmoke;
+  line-height: 5vw;
+}
+#divButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 7.5vw;
+  width: 25%;
+  height: 25%;
+  position: absolute;
+  background-color: whitesmoke;
+}
+#infoRitiro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15vw;
+  width: fit-content;
+  height: 10%;
+  position: absolute;
+  background-color: #f8ffb8;
+  line-height: 5vw;
+  font-size: medium;
+}
+
+select{
+  width: 45%;
+  height: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}

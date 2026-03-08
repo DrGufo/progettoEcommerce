@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  #content
+    section#upper
+      h1= "Visualizza prodotti"
+    div(id="visualizza")
+        table(id="tabellaProdotti")
+          thead
+            tr
+              th Categoria
+              th Descrizione
+              th Prezzo
+              th Quantità
+              th Scelta
+            each product in prodotti
+                tr
+                  td #{product.categoria}
+                  td #{product.descrizione}
+                  td #{product.prezzo}
+                  td #{product.quantita}
+                  td
+                    form(action="/spedizioni", method="POST", id="form")                      
+                      if product.quantita > 0
+                        input(id="in", type="hidden", name="product", value=JSON.stringify(product))  
+                        button(type="submit", class="m") acquista
+                      else
+                        input(id="in", type="hidden", name="product", value=JSON.stringify(product))
+                        button(type="submit", class="m", disabled, style="background-color:gray") prodotto non diponibile
+                      
+    br
+    br
+    p Torna indietro
+    a(href='/login') Login
+
+  script(src="./javascripts/visualizzaProdotti.js")

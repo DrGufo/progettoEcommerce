@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+    #content
+      section#upper
+        h1 Login 
+      div(id="login")
+        form(action="/login", method="POST", id="form")
+            label(for="email") Email: 
+            input(type="text", id="email", name="email" required="required")
+            br
+            br
+            label(for="password") Password: 
+            input(type="password" id="password", name="password", required="required")
+            br
+            br
+            input(type="submit", value="Login", id="button")
+      br
+      br
+      p Non sei ancora registrato? 
+      a(href='/signUp') Sign up

@@ -1,0 +1,40 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+
+// Parametri di connessione al database
+$hostname = "localhost"; // Indirizzo del server del database
+$username = "root";    // Nome utente del database
+$database = "dbECommerce";   // Nome del database
+
+// Creazione di una connessione a MySQL usando MySQLi
+$connessione = new mysqli($hostname, $username, "" , $database);
+
+// Verifica della connessione
+if ($connessione->connect_error) {
+    die("Connessione fallita: " . $connessione->connect_error);
+}
+
+$prodotto = json_decode(file_get_contents("php://input"), true);
+
+$query = "UPDATE prodottiSede2 SET prezzo = ?, quantita = ? WHERE categoria = ? AND descrizione = ?";
+
+$query = $connessione->prepare($query);
+
+$query->bind_param("ssss", $prodotto["prezzo"], $prodotto["quantita"], $prodotto["categoria"], $prodotto["prodotto"]);
+
+$query->execute();
+
+if($query->affected_rows == 0){
+    echo "Prodotto non disponibile";
+    exit();
+}else{
+    echo "Prodotto modificato con successo";
+}
+
+$query->close();
+
+$connessione->close();
+
+exit();
+?>

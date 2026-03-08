@@ -1,0 +1,76 @@
+extends layout
+
+block content
+    #content
+      section#upper
+        h1= "Electronics"
+      section(id="operazioni")
+        
+        div(id="registrazione")
+            p Inserisci un nuovo prodotto:
+            form(action="/registrazione", method="POST" id="form")
+                label(for="sede") Sede:
+                select(id="sede", name="sede" required="required")
+                  option(value="principale1") Principale1
+                  option(value="principale2") Principale2
+                  option(value="remota1") Remota1
+                  option(value="remota2") Remota2
+                br
+                label(for="categoria") Categoria: 
+                input(type="text", id="categoria", name="categoria" required="required") 
+                br
+                label(for="prodotto") Prodotto: 
+                input(type="text", id="prodotto", name="prodotto" required="required") 
+                br
+                label(for="prezzo") Prezzo: 
+                input(type="text", id="prezzo", name="prezzo" required="required")
+                br
+                label(for="quantita") Quantità:
+                input(type="text", id="quantita", name="quantita" required="required")
+                br
+                input(type="submit", value="Inserisci", id="button")
+    
+        div(id="modifica")
+            p Modifica un prodotto:
+            form(action="/modifica", method="POST" id="form")
+                label(for="sede") Sede:
+                select(id="sede", name="sede" required="required")
+                  option(value="principale1") Principale1
+                  option(value="principale2") Principale2
+                  option(value="remota1") Remota1
+                  option(value="remota2") Remota2
+                br
+                label(for="categoria") Categoria: 
+                input(type="text", id="categoria", name="categoria" required="required") 
+                br
+                label(for="prodotto") Prodotto: 
+                input(type="text", id="prodotto", name="prodotto" required="required") 
+                br
+                label(for="prezzo") Prezzo: 
+                input(type="text", id="prezzo", name="prezzo" required="required")
+                br
+                label(for="quantita") Quantità:
+                input(type="text", id="quantita", name="quantita" required="required")
+                br
+                input(type="submit", value="Modifica", id="button")
+            
+        div(id="cancella")
+            p Cancella un prodotto:
+            form(action="/cancella", method="POST" id="form")
+                label(for="sede") Sede:
+                select(id="sede", name="sede" required="required")
+                  option(value="principale1") Principale1
+                  option(value="principale2") Principale2
+                  option(value="remota1") Remota1
+                  option(value="remota2") Remota2
+                br
+                label(for="categoria") Categoria: 
+                input(type="text", id="categoria", name="categoria" required="required") 
+                br
+                label(for="prodotto") Prodotto: 
+                input(type="text", id="prodotto", name="prodotto" required="required") 
+                br
+                input(type="submit", value="Cancella", id="button")
+                
+      p Torna indietro
+      a(href='/login') Login 

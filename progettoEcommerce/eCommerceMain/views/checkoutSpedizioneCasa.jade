@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    #content
+    h1 Checkout
+    div(id="content")
+        h1 Pronto per la spedizione
+        div= "Prodotto: " + prodotto.descrizione 
+        div= "Prezzo: " + prodotto.prezzo + "€"
+        br
+        br
+        a(href='/visualizza') Torna alla visualizzazione prodotti
